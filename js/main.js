@@ -4,7 +4,7 @@
 
 let rotation = 0;
 
-let imgs = ['img/charles.jpg', 'img/chris.jpeg']
+let imgs = ['img/charles.jpg', 'img/chris.jpg']
 
 function swap(){
   $('section.leon img').attr('src', imgs[rotation])
