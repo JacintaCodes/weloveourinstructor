@@ -4,7 +4,7 @@
 
 let rotation = 0;
 
-let imgs = ['img/charles1.jpg', 'img/charles2.jpg', 'img/chris.jpg', 'img/kareem.jpg', 'img/sam.jpg', 'img/taye.jpg', 'img/sully.jpg']
+let imgs = ['img/charles1.jpg', 'img/charles2.jpg', 'img/chris.jpg', 'img/kareem.jpg', 'img/sam.jpg', 'img/taye.jpg', 'img/sully.jpg', 'img/oraka.jpg']
 
 function swap(){
   $('section.leon img').attr('src', imgs[rotation])
@@ -12,16 +12,16 @@ function swap(){
 
 $("#leonnext").on('click', function(){
   rotation += 1;
- if (rotation >= imgs.length) {
-   rotation = imgs.length
+ if (rotation === imgs.length) {
+   rotation = 0
  }
  swap()
 })
 
 $("#leonback").on('click', function(){
   rotation -= 1;
-  if (rotation <= 0) {
-  rotation = 0
+  if (rotation === -1) {
+  rotation = imgs.length -1
   }
   swap()
 })
